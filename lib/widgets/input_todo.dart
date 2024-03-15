@@ -22,7 +22,7 @@ class _InputTodoState extends State<InputTodo> {
         cursorColor: primaryColor,
         decoration: InputDecoration(
           hintText: 'Add New To-Do',
-          suffixIcon: IconButton( icon: Icon(Icons.add), onPressed: ()=> widget.addTodo,),
+          suffixIcon: IconButton( icon: Icon(Icons.add), onPressed: () => widget.addTodo(),),
           contentPadding: EdgeInsets.symmetric(horizontal: 15),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),

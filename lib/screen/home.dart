@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               inputController: _inputController,
               addTodo: (){
                 setState(() {
-                  todos.add(Todo(title: _inputController.text, id: DateTime.now().toString()),);
+                  todos.add(Todo(title: _inputController.text, id: DateTime.now().toString()));
                   _inputController.clear();
                 });
               },
