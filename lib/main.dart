@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/screen/home.dart';
 
-var primaryColor = Color.fromARGB(255, 175, 63, 255);
+var primaryColor = Color.fromARGB(255, 152, 32, 238);
 
 void main() {
   runApp(MaterialApp(

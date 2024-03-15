@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             isDone: todo.isDone,
             todoClick: (){
               setState(() {
-                todo.isDone = !todo.isDone;
+                todo.toggleDone();
               });
             },
           ),

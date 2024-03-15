@@ -13,11 +13,14 @@ class _InputTodoState extends State<InputTodo> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(0.0),
+      
       child: TextField(
+        
         cursorColor: primaryColor,
         decoration: InputDecoration(
           hintText: 'Add New To-Do',
           suffixIcon: Icon(Icons.add),
+          contentPadding: EdgeInsets.symmetric(horizontal: 15),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide: BorderSide(color: Colors.grey),

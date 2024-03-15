@@ -16,6 +16,7 @@ class _MySearchBarState extends State<MySearchBar> {
       child: TextField(
         cursorColor: primaryColor,
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 15),
           hintText: 'Search',
           prefixIcon: Icon(Icons.search),
           border: OutlineInputBorder(
