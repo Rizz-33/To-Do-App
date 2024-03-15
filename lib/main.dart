@@ -6,8 +6,8 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 255, 211, 80),
-        title: Text("To-Do App"),
+        backgroundColor: Color.fromARGB(255, 255, 203, 48),
+        title: Text("To-Do App", style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: HomePage(),
