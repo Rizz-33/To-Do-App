@@ -39,7 +39,15 @@ class _HomePageState extends State<HomePage> {
       child: ListView(
         children: [
           for(Todo todo in todos)
-          TodoCard(title: todo.title, isDone: todo.isDone,),
+          TodoCard(
+            title: todo.title,
+            isDone: todo.isDone,
+            todoClick: (){
+              setState(() {
+                todo.isDone = !todo.isDone;
+              });
+            },
+          ),
         ],
       ),
     );
