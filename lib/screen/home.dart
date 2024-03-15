@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final TextEditingController _inputController = TextEditingController();
 
   List<Todo> todos =[
     Todo(title: 'gym', id: '1', isDone: true),
@@ -27,7 +28,16 @@ class _HomePageState extends State<HomePage> {
             MySearchBar(),
             SizedBox(height: 20),
             _list(),
-            InputTodo(),
+            InputTodo(
+              inputController: _inputController,
+              addTodo: (){
+                setState(() {
+                  todos.add(Todo(title: _inputController.text, id: DateTime.now().toString()),);
+                  _inputController.clear();
+                });
+              },
+            
+            ),
           ],
         ),
       ),

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:todoapp/main.dart';
 
 class InputTodo extends StatefulWidget {
-  const InputTodo({super.key});
+  final TextEditingController inputController;
+  final Function addTodo;
+
+  const InputTodo({super.key, required this.inputController, required this.addTodo});
 
   @override
   State<InputTodo> createState() => _InputTodoState();
@@ -15,11 +18,11 @@ class _InputTodoState extends State<InputTodo> {
       padding: const EdgeInsets.all(0.0),
       
       child: TextField(
-        
+        controller: widget.inputController,
         cursorColor: primaryColor,
         decoration: InputDecoration(
           hintText: 'Add New To-Do',
-          suffixIcon: Icon(Icons.add),
+          suffixIcon: IconButton( icon: Icon(Icons.add), onPressed: ()=> widget.addTodo,),
           contentPadding: EdgeInsets.symmetric(horizontal: 15),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
