@@ -5,8 +5,9 @@ class TodoCard extends StatefulWidget {
   final String title;
   final bool isDone;
   final Function todoClick;
+  final Function deleteTodo;
 
-  const TodoCard({super.key, required  this.title, required this.isDone, required this.todoClick});
+  const TodoCard({super.key, required  this.title, required this.isDone, required this.todoClick, required this.deleteTodo});
 
   @override
   State<TodoCard> createState() => _TodoCardState();
@@ -23,12 +24,14 @@ class _TodoCardState extends State<TodoCard> {
       ),
       child: ListTile(
         onTap: () => widget.todoClick(),
-        title: Text(widget.title, style: TextStyle(color: Colors.black,),),
+        title: widget.isDone
+          ? Text(widget.title, style: TextStyle(color: const Color.fromARGB(255, 114, 114, 114),),)
+          :Text(widget.title,),
         leading: widget.isDone
           ? Icon(Icons.check_box, color: primaryColor,)
           : Icon(Icons.check_box_outline_blank, color: primaryColor,),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () => widget.deleteTodo(),
           icon: Icon(Icons.delete, color: primaryColor,),
         ),
       ),

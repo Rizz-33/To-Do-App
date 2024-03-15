@@ -47,6 +47,11 @@ class _HomePageState extends State<HomePage> {
                 todo.toggleDone();
               });
             },
+            deleteTodo: (){
+              setState(() {
+                todos.remove(todo);
+              });
+            },
           ),
         ],
       ),
