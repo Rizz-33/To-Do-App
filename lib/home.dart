@@ -14,6 +14,8 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: [
         MySearchBar(),
+        SizedBox(height: 20,),
+        _list(),
       ],
     );
   }
