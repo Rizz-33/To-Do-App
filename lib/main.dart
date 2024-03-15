@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/home.dart';
 
-var primaryColor = Color.fromARGB(255, 255, 203, 48);
+var primaryColor = Color.fromARGB(255, 175, 63, 255);
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
-      primaryColor: Color.fromARGB(255, 255, 203, 48),
+      primaryColor: primaryColor,
     ),
     home: Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
         title: Text(
           "To-Do App",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         centerTitle: true,
       ),

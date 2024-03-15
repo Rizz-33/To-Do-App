@@ -14,6 +14,7 @@ class _MySearchBarState extends State<MySearchBar> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
+        cursorColor: primaryColor,
         decoration: InputDecoration(
           hintText: 'Search',
           prefixIcon: Icon(Icons.search),

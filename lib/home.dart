@@ -17,4 +17,20 @@ class _HomePageState extends State<HomePage> {
       ],
     );
   }
+
+  _list() {
+    return Expanded(
+      child: ListView(
+        children: [
+          ListTile(
+            title: Text('first item'),
+          ),
+          ListTile(
+            title: Text('first item'),
+          ),
+        ],
+      ),
+    );
+  }
 }
+
