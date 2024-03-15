@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todoapp/home.dart';
+import 'package:todoapp/screen/home.dart';
 
 var primaryColor = Color.fromARGB(255, 175, 63, 255);
 
@@ -18,11 +18,10 @@ void main() {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
+      body:
           HomePage(),
-        ],
+        
       ),
-    ),
+    
   ));
 }
