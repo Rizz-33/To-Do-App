@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatefulWidget {
-  const SearchBar({super.key});
+class MySearchBar extends StatefulWidget {
+  const MySearchBar({super.key});
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<MySearchBar> createState() => _MySearchBarState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class _MySearchBarState extends State<MySearchBar> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
